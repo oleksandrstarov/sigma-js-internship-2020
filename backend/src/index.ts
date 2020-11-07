@@ -10,6 +10,7 @@ const app = express();
 
 app.use(corsMiddleware);
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, '../fe/')));
 
 app.use('/api/', routes);
 
