@@ -24,6 +24,7 @@ jobs:
       working-directory: frontend
       run: |
         npm i
+        npm i typescript
         npm run build
         mv /build /fe
         
