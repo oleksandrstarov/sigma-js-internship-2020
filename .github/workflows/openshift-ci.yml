@@ -35,6 +35,7 @@ jobs:
         shopt -s extglob
         rm -r !(backend|fe|dto)
         ls
+        
     - name: Add changes to Git tracking
       run:  |
         git config user.email "gitactions@gmail.com"
@@ -42,6 +43,7 @@ jobs:
         git checkout -b pr-pages
         git add -A
         git commit -m release
+        
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
