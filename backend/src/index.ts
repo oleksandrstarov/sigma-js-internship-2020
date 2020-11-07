@@ -16,7 +16,7 @@ app.use('/api/', routes);
 app.get('/healthcheck', (req, res) => res.send('Express + TypeScript Server'));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, './fe/index.html'));
+  res.sendFile(path.join(__dirname, '../fe/index.html'));
 });
 
 app.listen(PORT, () => {
