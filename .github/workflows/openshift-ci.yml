@@ -29,15 +29,11 @@ jobs:
         npm i typescript
         npm run build
         mv ./build ../fe
-        
-    - name: build backend
-      working-directory: backend
-      run: npm run build
       
     - name: clean-up
       run: |
         shopt -s extglob
-        rm -r !(backend)
+        rm -r !(backend|fe|dto)
         ls
     - name: Add changes to Git tracking
       run:  |
