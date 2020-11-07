@@ -28,14 +28,11 @@ jobs:
         npm i
         npm i typescript
         npm run build
-        mv /build /fe
+        mv ./build ../fe
         
     - name: build backend
       working-directory: backend
       run: npm run build
-      
-    - name: copy-files
-      run:  cp -r ./frontend/fe ./backend
       
     - name: clean-up
       run: |
